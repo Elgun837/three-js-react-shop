@@ -25,7 +25,7 @@ const Home = () => {
           </motion.header>
           <motion.div className="home-content" {...headContainerAnimation}>
                 <h1 className="head-text">
-                    LET'S DO<br className="xl:block hidden" /> RIT.
+                    LET'S DO<br className="xl:block hidden" /> IT.
                 </h1>
           </motion.div>
           <motion.div {...headContentAnimation} className="flex flex-col
