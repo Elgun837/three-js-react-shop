@@ -34,7 +34,12 @@ const Customizer = () => {
         readFile={readFile}
         />
       case "aipicker":
-        return <AIPicker />
+        return <AIPicker
+        prompt={prompt}
+        setPrompt={setPrompt}
+        generatingImg={generatingImg}
+        handleSubmit={handleSubmit}
+        />
       default:
         return null;
     }
@@ -62,6 +67,12 @@ const Customizer = () => {
           state.isFullTexture = true;
           state.isLogoTexture = true;
     }
+  setActiveFilterTab((prevState) => {
+    return {
+      ...prevState,
+      [tabName] : !prevState[tabName]
+    }
+  })
   }
 
   const readFile = (type) => {
